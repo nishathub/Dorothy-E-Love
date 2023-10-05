@@ -5,9 +5,11 @@
 @import "./components/ellipse";
 @import "./components/cards";
 @import "./components/box";
-@import "./mixins/responsive";
-@import "./layouts/container";
 @import "./vendors/n_col";
+@import "./mixins/responsive";
+@import "./mixins/font_mix";
+@import "./layouts/container";
+@import "./layouts/banner";
 
 
 
@@ -17,10 +19,6 @@ body{
     height: 100vh;
 }
 .page_body{
-    .row{
-        display: flex;
-        flex-wrap: wrap;
-        box-sizing: border-box;
-    }
+    
 }
 
