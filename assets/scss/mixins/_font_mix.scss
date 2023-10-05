@@ -11,4 +11,13 @@
     font-weight: $wt;
     line-height: $lh;
     letter-spacing: $ls;
-}
+};
+
+@mixin d-font($fs,$lh,$cl,$ff,$tt:uppercase){
+    font-size: $fs;
+    line-height: $lh;
+    color: $cl;
+    font-family: $ff;
+    text-transform: $tt;    
+    font-weight: 400;
+};
