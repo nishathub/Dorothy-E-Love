@@ -1,0 +1,52 @@
+@import '../abstracts/variables';
+@import '../mixins/common_mix';
+@import '../mixins/responsive';
+
+#nav_id{
+
+    .container{
+
+        .nav_div{
+            padding: 20px 0px;
+            // height: 100%;
+            // width: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+
+            @include custom_responsive(1020px, 1350px){
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .image{
+               
+                img{
+                    height: 75px;
+                    @include custom_responsive(0px,576px){
+                        height: 60px;
+                    }
+                }
+            }
+            ul{
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                @include custom_responsive(0px, 1019px){
+                    display: none;
+                }
+                li{
+                    &:nth-child(1) a{
+                        @include d-font($fs:18px,$lh:15px,$cl:#800020,$ff:$poppins,$tt:uppercase);                            
+                        }
+                    a{
+                        @include d-font($fs:18px,$lh:15px,$cl:$black,$ff:$poppins,$tt:uppercase);
+                        
+
+                    }
+                }
+            }
+        }
+    }
+}

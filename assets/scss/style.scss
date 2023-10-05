@@ -5,20 +5,23 @@
 @import "./components/ellipse";
 @import "./components/cards";
 @import "./components/box";
+@import "./components/nav_button";
 @import "./vendors/n_col";
 @import "./mixins/responsive";
 @import "./mixins/font_mix";
 @import "./layouts/container";
 @import "./layouts/banner";
+@import "./pages/banner";
+@import "./pages/navbar";
 
 
 
 
 body{
     background-color: skyblue;
-    height: 100vh;
+    height: 100%;
 }
 .page_body{
-    
+ 
 }
 

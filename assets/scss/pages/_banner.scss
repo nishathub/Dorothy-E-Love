@@ -1,0 +1,100 @@
+
+@import '../abstracts/variables';
+@import '../mixins/common_mix';
+@import '../mixins/responsive';
+@import '../layouts/container';
+
+
+
+#banner_id{
+    height: 700px;
+    width: auto;
+background-image: url('../images/bnr-img.jpg');
+background-size: cover;
+background-position-x: 0px;
+@include custom_responsive(0px, 767.9px){   
+    height: 450px;   
+}
+@include custom_responsive(768px, 991.9px){   
+    height: 500px;   
+}
+    .banner_div{
+        height: 100%;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 190px;
+        @include custom_responsive(0px, 767.9px){
+            justify-content: center;
+            // align-items: flex-start;
+            padding: 0px;
+        } 
+        @include md(){
+            padding-left: 40px;
+        }       
+
+        .content_box{
+
+            h1{
+                @include d-font($fs:134px,$lh:90px,$cl:$white,$ff:$allura,$tt:capitalize);  
+                @include lg(){
+                    font-size: 100px;
+                    line-height: 60px;
+                }
+                @include md(){
+                    font-size: 90px;
+                    line-height: 60px;
+                }
+                @include custom_responsive(0px, 767.9px){
+                    font-size: 70px;
+                    line-height: 50px;
+                }
+                         
+            }
+            h2{
+                @include d-font($fs:75px,$lh:70px,$cl:rgb(146, 3, 3),$ff:$lato,$tt:capitalize); 
+                @include lg(){
+                    font-size: 65px;
+                    line-height: 60px;
+                }
+                @include md(){
+                    font-size: 55px;
+                    line-height: 50px;
+                }
+                @include custom_responsive(0px, 767.9px){
+                    font-size: 40px;
+                    line-height: 40px;
+                }       
+            }
+            h6{
+                @include d-font($fs:27px,$lh:30px,$cl:$white,$ff:$poppins,$tt:normal);
+                width: 460px;
+                margin: 35px 0px;
+    
+                @include md(){
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+                @include custom_responsive(0px, 767.9px){
+                    font-size: 16px;
+                    line-height: 25px;
+                    width: 320px;
+                    margin: 25px 0px;        
+                }
+            }
+            p{
+                @include d-font($fs:35px,$lh:30px,$cl:$white,$ff:$allura,$tt:normal);
+                @include md(){
+                    font-size: 30px;
+                    line-height: 30px;
+                }
+                @include custom_responsive(0px, 767.9px){
+                    font-size: 22px;
+                    line-height: 20px;
+                            
+                }        
+            }
+        }
+    }
+}
