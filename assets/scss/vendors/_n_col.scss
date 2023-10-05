@@ -1,0 +1,62 @@
+@import '../abstracts/variables';
+@import '../mixins/common_mix';
+@import '../mixins/responsive';
+
+
+// here we used the name "n_col" so that it won't clash with bootstrap 'col'
+
+$col-amount: 12;
+$col-width: 100%/$col-amount;
+
+@for $i from 1 through $col-amount {
+    .n_col-#{$i}{
+        width: $col-width * $i;
+        padding: 0px 15px;
+        box-sizing: border-box;
+    }
+}
+@media (min-width: 576px) {
+@for $i from 1 through $col-amount {
+    .n_col-sm-#{$i}{
+        width: $col-width * $i;
+        padding: 0px 15px;
+        box-sizing: border-box;
+    }
+}
+}
+@media (min-width: 768px) {
+@for $i from 1 through $col-amount {
+    .n_col-md-#{$i}{
+        width: $col-width * $i;
+        padding: 0px 15px;
+        box-sizing: border-box;
+    }
+}
+}
+@media (min-width: 992px) {
+@for $i from 1 through $col-amount {
+    .n_col-lg-#{$i}{
+        width: $col-width * $i;
+        padding: 0px 15px;
+        box-sizing: border-box;
+    }
+}
+}
+@media (min-width: 1200px) {
+@for $i from 1 through $col-amount {
+    .n_col-xl-#{$i}{
+        width: $col-width * $i;
+        padding: 0px 15px;
+        box-sizing: border-box;
+    }
+}
+}
+@media (min-width: 1400px) {
+@for $i from 1 through $col-amount {
+    .n_col-xxl-#{$i}{
+        width: $col-width * $i;
+        padding: 0px 15px;
+        box-sizing: border-box;
+    }
+}
+}
