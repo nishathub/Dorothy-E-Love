@@ -1,0 +1,44 @@
+
+#footer_id{
+background-color: $black;
+    .footer_div{
+        text-align: center;
+        padding: 40px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        p,a{
+            @include d-font($fs:18px,$lh:15px,$cl:$white,$ff:$lato,$tt:unset);
+        }
+        i{
+            color: $white;
+        }
+        .social_icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            a{
+                @include ellipse($sq: 45px,$br: $white, $bg: transparent,);
+                &:hover{
+                    i{
+                        color: $black;
+                    }
+                }
+                
+            }
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            a{
+
+            }
+            i{
+
+            }
+        }
+    }
+}
