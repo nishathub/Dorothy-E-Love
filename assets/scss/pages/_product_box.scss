@@ -27,19 +27,27 @@
                         
                     }
                     @include custom_responsive(0px, 767.9px){
-                        font-size: 50px;
-                        line-height: 45px;
+                        font-size: 45px;
+                        line-height: 40px;
                         
                     }                    
                                                         
                 }
                 img{
                     margin: 40px 0px 30px 0px;
-                    @include custom_responsive(0px,575.9px){
+                    @include md(){
+                        width: 160px;
+                        margin-top: 20px;
+                    }
+                    @include sm(){
                         width: 150px;
                         margin-top: 20px;
                     }
-
+                    @include custom_responsive(0px,575.9px){
+                        width: 130px;
+                        margin-top: 10px;
+                    }
+    
                 }
             }
             .product_list{
@@ -63,6 +71,9 @@
                         margin-top: 10px;
                         p{
                             @include d-font($fs:20px,$lh:23px,$cl:$black,$ff:$lato,$tt:uppercase);
+                            @include custom_responsive(0px,767.9px){
+                                font-size:16px ;
+                            }
                         }
                         i{
                             color: rgba(0, 0, 0, 0.514);

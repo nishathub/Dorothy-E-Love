@@ -1,0 +1,132 @@
+
+#testimonial_id{
+    background-color: #dddfdc;
+    .testimonial_div{
+        padding: 75px 0px;
+        text-align: center;
+        @include custom_responsive(0px, 767.9px){
+            padding: 40px 0px;
+        }
+        .heading{
+
+            h2{
+                @include d-font($fs:95px,$lh:30px,$cl:$black,$ff:$allura,$tt:capitalize);
+                
+                @include lg(){
+                    font-size: 80px;
+                    line-height: 30px;
+                }
+                @include md(){
+                    font-size: 60px;
+                    line-height: 30px;
+                    
+                }
+                @include custom_responsive(0px, 767.9px){
+                    font-size: 45px;
+                    line-height: 40px;
+                    
+                }                    
+                                                    
+            }
+            img{
+                margin: 40px 0px 30px 0px;
+                @include md(){
+                    width: 160px;
+                    margin-top: 20px;
+                }
+                @include sm(){
+                    width: 150px;
+                    margin-top: 20px;
+                }
+                @include custom_responsive(0px,575.9px){
+                    width: 130px;
+                    margin-top: 10px;
+                }
+
+            }
+        }
+        .bottom{
+            
+            .review_list{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+                a{
+                    i{
+                    color: #4d4d4d;
+                    font-size: 18px;
+                    }
+                }
+                .review_box{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    gap: 50px;
+                    @include custom_responsive(1200px, 1290px){
+                        gap: 15px;
+                    }
+                    @include custom_responsive(991.9px, 1075px){
+                        gap: 10px;
+                    }
+                    @include md(){
+                        gap: 20px;
+                    }
+                    .review{
+                        @include card($bg: transparent); 
+                        height: 375px;
+                        width: 365px;
+                        @include lg(){
+                            width: 300px;
+                            height: 450px;
+                        }
+                        @include custom_responsive(0px, 475.9px){
+                            width: 260px;
+                            height: auto;
+                            padding: 20px 10px;
+                        }
+                        &:nth-child(3){
+                            @include custom_responsive(0px, 821.9px){
+                                display: none;
+                            }
+                        }
+                        &:nth-child(2){
+                            @include custom_responsive(1200px, 2000px){
+                                height: 425px;
+                                padding: 40px 20px;                          
+                            }
+                            @include lg(){
+                                height: 500px;
+                            }
+                            @include custom_responsive(0px, 991.9px){
+                                display: none;
+                            }
+                            
+                        }
+
+                        i{
+                            font-size: 40px;
+                        }
+                        p{
+                        @include d-font($fs:16px,$lh:24px,$cl:#797979,$ff:$poppins,$tt:normal);
+                        margin: 30px 0px;
+                        @include xl(){
+                            // font-size:14px;
+                        }
+                        @include custom_responsive(0px, 475.9px){
+                            font-size: 14px;
+                        }
+                        }
+                        h6{
+                        @include d-font($fs:22px,$lh:22px,$cl:$black,$ff:$poppins,$tt:uppercase);
+                        @include custom_responsive(0px, 475.9px){
+                            font-size: 16px;
+                        }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
