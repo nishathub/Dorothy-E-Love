@@ -1,0 +1,106 @@
+// @import '../abstracts/variables';
+// @import '../mixins/common_mix';
+// @import '../mixins/responsive';
+
+#about_id{
+    background-image: url('../images/author-bg.png');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 0px) 70px;
+    background-color: #f7f7fa;
+    .about_div{
+        padding: 95px 0px;
+        @include custom_responsive(0px, 767.9px){
+            padding: 30px 0px;
+        }
+
+        .container{
+           display: flex;
+           gap: 120px;
+           @include custom_responsive(768px,1100px){
+               gap: 40px;
+           }
+           @include custom_responsive(0px, 767.9px){
+                gap: 40px;
+                flex-direction: column;
+            //    justify-content: center;
+            //    align-items: center;
+           }
+
+            .image{
+
+                img{
+                    height: 600px;
+                    @include lg(){
+                        height: 500px;
+                    }
+                    @include md(){
+                        height: 450px;
+                    }
+                    @include custom_responsive(0px, 767.9px){
+                        height: 400px;
+                    }
+                }
+            }
+            .info{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h2{
+                    
+                    @include d-font($fs:115px,$lh:75px,$cl:$black,$ff:$allura,$tt:normal);
+                    &::first-letter{
+                        color: #800020;
+                    }
+                    @include lg(){
+                        font-size: 90px;
+                        line-height: 60px;
+                    }
+                    @include md(){
+                        font-size: 60px;
+                        line-height: 50px;
+                        width: 300px;
+                    }
+                    @include custom_responsive(0px, 767.9px){
+                        font-size: 50px;
+                        line-height: 50px;
+                        width: 300px;
+                    }                    
+                    
+                }
+                p{
+                    @include d-font($fs:18px,$lh:32px,$cl:$black,$ff:$poppins,$tt:normal);
+                    // width: 510px;
+                    margin-top: 40px;
+                    @include custom_responsive(1250px,2000px){
+                        width: 510px;
+                    }
+                    @include custom_responsive(576px, 767.9px){
+                        width: 510px;
+                    }
+                    @include md(){
+                        font-size: 16px;
+                        line-height: 20px;
+                        margin-top: 20px;
+                    }
+                    @include custom_responsive(0px, 767.9px){
+                        font-size: 14px;
+                        line-height: 20px;
+                        margin-top: 20px;
+                    }
+                }
+                a{
+                    // @include d-font($fs:16px,$lh:30px,$cl: #800020,$ff:$poppins,$tt:normal);
+                    @include n_btn($border:$black, $txt_c: #800020, $bg_c: #f7f7fa, $radius: 35px);
+                    width: 210px;
+                    margin-top: 40px;
+                    @include custom_responsive(0px, 767.9px){
+                        @include n_btn($border:$black, $txt_c: #800020, $bg_c: #f7f7fa, $radius: 35px);
+                        width: 190px;
+                        margin-top: 20px;
+                        padding: 5px 10px;        
+                    }
+                }
+            }
+        }
+    }
+}
