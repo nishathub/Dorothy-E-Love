@@ -48,3 +48,4 @@ OTHERS FREQUENT:
 <i class="fa-regular fa-paper-plane"></i>
 <i class="fa-solid fa-arrow-up-right-from-square"></i>
 <i class="fa-solid fa-robot"></i>
+<i class="fa-solid fa-circle-play"></i>
